@@ -15,9 +15,6 @@ phases:
       - npm run build
       
 artifacts:
+  base-directory: dist/my-angular-project
   files:
-    - app/build/*.jar
-    - app/build/*.war
-  discard-paths: yes
-  base-directory: build
-      
+    - '*/'
