@@ -5,17 +5,16 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - npm install -g @angular/cli@9.0.6
-  pre_build:
-    commands:
+      - echo "Installing dependencies..."
       - npm install
+      
   build:
     commands:
-      - ng build --prod
-    finally:
-      - echo final block echo
+      - echo "Building React project..."
+      - npm run build
       
 artifacts:
   files:
     - '**/*'
   base-directory: build
+      
