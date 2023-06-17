@@ -6,6 +6,7 @@ phases:
       nodejs: 18
     commands:
       - echo "Installing Node.js version 18 ..."
+      - npm cache clean --force
       - npm install
       
   build:
